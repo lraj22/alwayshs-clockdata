@@ -33,7 +33,7 @@
 		{
 			"id": "busyDay",
 			"label": "Busy day",
-			"timing": {
+			"timings": {
 				"-2nd period: Morning fitness": ["3:00 AM -- 4:00 AM"],
 				"Nighttime snack": ["4:00 AM -- 4:30 AM"],
 				"-1st period: Bonding": ["4:30 AM -- 6:00 AM"],
@@ -61,7 +61,7 @@
 		{
 			"id": "getSomeSleepLol",
 			"label": "Get some sleep LOL",
-			"timing": {
+			"timings": {
 				"Get some sleep, it's the weekend!": ["12:00 AM -- 11:59 PM"],
 				"Wake up, it's time for tomorrow!": ["11:59 PM -- 11:59:59.999 PM"]
 			}
