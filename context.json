@@ -1,29 +1,30 @@
 {
-	"version": 1,
-	"last_updated_id": "2025-09-14-01",
+	"version": 2,
+	"last_updated_id": "2025-11-16-01",
 	"metadata": {
-		"schoolId": -2,
-		"school": "Always High School",
-		"shortName": "AHS",
-		"timezone": "America/New_York",
-		"note": "This is a fake high school, hence the negative ID and fake looking, well, pretty much everything."
+		"school_id": -2,
+		"school_name": "Always High School",
+		"short_name": "AHS",
+		"timezone": "America/New_York"
 	},
 	
 	"announcements": [
 		{
 			"message": "Welcome to the main school day! (8am-4pm)",
-			"applies": ["8 AM -- 4 PM"]
+			"applies": [
+				"8 AM -- 4 PM"
+			]
 		}
 	],
 	
-	"schedulingRules": [
+	"scheduling_rules": [
 		{
-			"match": "dayOfTheWeek",
+			"matcher": "dayOfTheWeek",
 			"pattern": "1 -- 5",
 			"schedule": "busyDay"
 		},
 		{
-			"match": "dayOfTheWeek",
+			"matcher": "dayOfTheWeek",
 			"pattern": "6 -- 7",
 			"schedule": "getSomeSleepLol"
 		}
@@ -33,54 +34,134 @@
 		{
 			"id": "busyDay",
 			"label": "Busy day",
-			"timings": {
-				"-2nd period: Morning fitness": ["3:00 AM -- 4:00 AM"],
-				"Nighttime snack": ["4:00 AM -- 4:30 AM"],
-				"-1st period: Bonding": ["4:30 AM -- 6:00 AM"],
-				"First recess": ["6:00 AM -- 6:30 AM"],
-				"0th period: Elective": ["6:30 AM -- 8:00 AM"],
-				"1st period": ["8:00 AM -- 8:55 AM"],
-				"1st-2nd passing period": ["8:55 AM -- 9:00 AM"],
-				"2nd period": ["9:00 AM -- 9:55 AM"],
-				"Second recess": ["9:55 AM -- 10:30 AM"],
-				"3rd period": ["10:30 AM -- 11:55 AM"],
-				"3rd-4th passing period": ["11:55 AM -- 12:00 PM"],
-				"4th period": ["12:00 PM -- 12:55 PM"],
-				"Lunch": ["12:55 PM -- 1:55 PM"],
-				"Lunch-5th passing period": ["1:55 PM -- 2:00 PM"],
-				"5th period": ["2:00 PM -- 3:25 PM"],
-				"5th-6th passing period": ["3:25 PM -- 3:30 PM"],
-				"6th period": ["3:30 PM -- 4:55 PM"],
-				"6th-7th passing period": ["4:55 PM -- 5:00 PM"],
-				"7th period": ["5:00 PM -- 6:30 PM"],
-				"Main school day is over! (break)": ["6:30 PM -- 7:00 PM"],
-				"Sports/extracurricular generic block": ["7:00 PM -- 10:00 PM"],
-				"Late night studying": ["10:00 PM -- 11:59:59.999 PM", "12:00 AM -- 3:00 AM"]
-			}
+			"timings": [
+				{
+					"label": "-2nd period: Morning fitness",
+					"applies": "3:00 AM -- 4:00 AM"
+				},
+				{
+					"label": "Nighttime snack",
+					"applies": "4:00 AM -- 4:30 AM"
+				},
+				{
+					"label": "-1st period: Bonding",
+					"applies": "4:30 AM -- 6:00 AM"
+				},
+				{
+					"label": "First recess",
+					"applies": "6:00 AM -- 6:30 AM"
+				},
+				{
+					"label": "0th period: Elective",
+					"applies": "6:30 AM -- 8:00 AM"
+				},
+				{
+					"label": "1st period",
+					"applies": "8:00 AM -- 8:55 AM"
+				},
+				{
+					"label": "1st-2nd passing period",
+					"applies": "8:55 AM -- 9:00 AM"
+				},
+				{
+					"label": "2nd period",
+					"applies": "9:00 AM -- 9:55 AM"
+				},
+				{
+					"label": "Second recess",
+					"applies": "9:55 AM -- 10:30 AM"
+				},
+				{
+					"label": "3rd period",
+					"applies": "10:30 AM -- 11:55 AM"
+				},
+				{
+					"label": "3rd-4th passing period",
+					"applies": "11:55 AM -- 12:00 PM"
+				},
+				{
+					"label": "4th period",
+					"applies": "12:00 PM -- 12:55 PM"
+				},
+				{
+					"label": "Lunch",
+					"applies": "12:55 PM -- 1:55 PM"
+				},
+				{
+					"label": "Lunch-5th passing period",
+					"applies": "1:55 PM -- 2:00 PM"
+				},
+				{
+					"label": "5th period",
+					"applies": "2:00 PM -- 3:25 PM"
+				},
+				{
+					"label": "5th-6th passing period",
+					"applies": "3:25 PM -- 3:30 PM"
+				},
+				{
+					"label": "6th period",
+					"applies": "3:30 PM -- 4:55 PM"
+				},
+				{
+					"label": "6th-7th passing period",
+					"applies": "4:55 PM -- 5:00 PM"
+				},
+				{
+					"label": "7th period",
+					"applies": "5:00 PM -- 6:30 PM"
+				},
+				{
+					"label": "Main school day is over! (break)",
+					"applies": "6:30 PM -- 7:00 PM"
+				},
+				{
+					"label": "Sports/extracurricular generic block",
+					"applies": "7:00 PM -- 10:00 PM"
+				},
+				{
+					"label": "Late night studying",
+					"applies": "10:00 PM -- 11:59:59.999 PM"
+				},
+				{
+					"label": "Late night studying",
+					"applies": "12:00 AM -- 3:00 AM"
+				}
+			]
 		},
 		{
 			"id": "getSomeSleepLol",
 			"label": "Get some sleep LOL",
-			"timings": {
-				"Get some sleep, it's the weekend!": ["12:00 AM -- 11:59 PM"],
-				"Wake up, it's time for tomorrow!": ["11:59 PM -- 11:59:59.999 PM"]
-			}
+			"timings": [
+				{
+					"label": "Get some sleep, it's the weekend!",
+					"applies": "12:00 AM -- 11:59 PM"
+				},
+				{
+					"label": "Wake up, it's time for tomorrow!",
+					"applies": "11:59 PM -- 11:59:59.999 PM"
+				}
+			]
 		}
 	],
 	
 	"full_day_overrides": [
 		{
-			"name": "Only day off",
-			"applies": ["2026-06-07"],
+			"occasion": "Only day off",
+			"applies": [
+				"2026-06-07"
+			],
 			"schedule": "none"
 		}
 	],
 	
 	"timeframe_overrides": [
 		{
-			"name": "Example ('name' appears in settings: overrideIndicator)",
-			"applies": ["2025-01-01/11:00 AM -- 2025-01-01/01:00 PM"],
-			"description": "This is an example timeframe override. ('description' appears on clock screen: currentTimePeriod)"
+			"occasion": "Example",
+			"label": "[Testing] Timeframe Override",
+			"applies": [
+				"2025-01-01/11:00 AM -- 2025-01-01/01:00 PM"
+			]
 		}
 	]
 }
